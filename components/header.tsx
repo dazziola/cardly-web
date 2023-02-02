@@ -12,6 +12,7 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
+import Logo from "./logo";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,13 +27,17 @@ const Header = () => {
             wrap="wrap"
             paddingY={4}
             paddingX={8}
-            bg="white"
-            borderBottomColor={"brand.light"}
-            borderBottomWidth={4}
+            borderBottomColor={"brand.secondary"}
+            margin={4}
+            boxShadow={"md"}
+            rounded={"lg"}
+            border={"2px solid"}
+            borderColor={"brand.100"}
+            backgroundColor={"white"}
         >
             <Flex align="center">
                 <Heading as="h1" letterSpacing={"tighter"} color={"black"}>
-                    App
+                    <Logo size="medium" />
                 </Heading>
             </Flex>
 
